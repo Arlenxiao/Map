@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IoT.MapConvert
 {
     /// <summary>
-    /// gps转转换类
+    /// gps转换类
     /// 用例:GPS.WGS2GCJ(23,114)
     /// 地球上同一个地理位置的经纬度，在不同的坐标系中，会有少于偏移，国内目前常见的坐标系主要分为三种：
     /// 地球坐标系——WGS84：常见于 GPS 设备，Google 地图等国际标准的坐标体系。
