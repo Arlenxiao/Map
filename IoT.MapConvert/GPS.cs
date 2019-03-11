@@ -45,10 +45,10 @@ namespace IoT.MapConvert
             var y = lat;
             var z = Math.Sqrt(x * x + y * y) + 0.00002 * Math.Sin(y * X_PI);
             var theta = Math.Atan2(y, x) + 0.000003 * Math.Cos(x * X_PI);
-            var bd_lon = z * Math.Cos(theta) + 0.0065;
+            var bd_lng = z * Math.Cos(theta) + 0.0065;
             var bd_lat = z * Math.Sin(theta) + 0.006;
 
-            return new Point { Lat = bd_lat, Lng = bd_lon };
+            return new Point { Lat = bd_lat, Lng = bd_lng };
         }
         /// <summary>
         /// 百度-火星坐标系
@@ -62,10 +62,10 @@ namespace IoT.MapConvert
             var y = lat - 0.006;
             var z = Math.Sqrt(x * x + y * y) - 0.00002 * Math.Sin(y * X_PI);
             var theta = Math.Atan2(y, x) - 0.000003 * Math.Cos(x * X_PI);
-            var gg_lon = z * Math.Cos(theta);
+            var gg_lng = z * Math.Cos(theta);
             var gg_lat = z * Math.Sin(theta);
 
-            return new Point { Lat = gg_lat, Lng = gg_lon };
+            return new Point { Lat = gg_lat, Lng = gg_lng };
         }
 
         /// <summary>
